@@ -393,7 +393,7 @@ This function is called at the very end of Spacemacs initialization."
  '(paradox-github-token t)
  '(pyim-dicts
    (quote
-    ((:name "pyim-greatdict" :file "/Users/yujo/Downloads/pyim-greatdict.pyim")))))
+    ((:name "pyim-greatdict" :file "~/.spacemacs.d/pyim-greatdict.pyim")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
