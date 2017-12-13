@@ -351,8 +351,22 @@ you should place your code here."
 
   ;; customize chinese layer
   ;; (spacemacs//set-monospaced-font "Source Code Pro" "BabelStone Han" 14 16)
-  (global-pangu-spacing-mode 0)
-  (setq pyim-punctuation-translate-p '(no yes auto))
+  ;; (global-pangu-spacing-mode 0)
+  (setq-default pyim-english-input-switch-functions
+                '(pyim-probe-auto-english
+                  pyim-probe-isearch-mode
+                  pyim-probe-program-mode
+                  pyim-probe-evil-normal-mode
+                  pyim-probe-org-structure-template))
+
+  (setq-default pyim-punctuation-half-width-functions
+                '(pyim-probe-punctuation-line-beginning
+                  pyim-probe-punctuation-after-punctuation))
+
+  (pyim-isearch-mode 1)
+
+  ;; use child-frame as it feels more responsive than popup
+  (setq pyim-page-tooltip 'child-frame)
 
   ;; evil-multiedit
   (require 'evil-multiedit)
