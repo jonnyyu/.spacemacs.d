@@ -367,6 +367,7 @@ you should place your code here."
 
   ;; use child-frame as it feels more responsive than popup
   (setq pyim-page-tooltip 'child-frame)
+  (setq pyim-page-style 'one-line)
 
   ;; evil-multiedit
   (require 'evil-multiedit)
