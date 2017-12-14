@@ -354,6 +354,12 @@ you should place your code here."
   (global-set-key (kbd "C-c c") 'org-capture)
   (global-set-key (kbd "C-c n p") 'org-projectile-project-todo-completing-read)
 
+  (setq org-capture-templates
+        '(("t" "Todo" entry (file+headline "~/orgs/gtd.org" "Inbox")
+           "* TODO %?\n %i\n %a")
+          ("j" "Journal" entry (file+datetree "~/orgs/journal.org")
+           "* %?\nEntered on %U\n %i\n %a")))
+
   ;; customize chinese layer
   ;; (spacemacs//set-monospaced-font "Source Code Pro" "BabelStone Han" 14 16)
   ;; (global-pangu-spacing-mode 0)
@@ -362,7 +368,7 @@ you should place your code here."
                   pyim-probe-isearch-mode
                   pyim-probe-program-mode
                   pyim-probe-evil-normal-mode
-                 pyim-probe-org-structure-template))
+                  pyim-probe-org-structure-template))
 
   (setq-default pyim-punctuation-half-width-functions
                 '(pyim-probe-punctuation-line-beginning
